@@ -1,4 +1,5 @@
 import 'package:PrestaShop/Core/Constants/localization.dart';
+import 'package:PrestaShop/Core/Themes/themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +11,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: Themes.primary,
       supportedLocales: Localization.supported,
       localizationsDelegates: Localization.delegates,
-      home: Scaffold(
+      home: const Scaffold(
         body: Center(
           child: Text("سلام جهان!"),
         ),
